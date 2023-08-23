@@ -28,4 +28,4 @@ release
 /prisma/migrations/*
 /prisma/dev.db
 
-# /src/services/puppeteer/stores/*
+/src/services/puppeteer/stores/*.ts
