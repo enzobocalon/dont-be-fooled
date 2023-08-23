@@ -1,0 +1,50 @@
+generator client {
+  provider      = "prisma-client-js"
+  engineType    = "library"
+  binaryTargets = ["native", "windows"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id        String     @id @default(uuid())
+  name      String
+  imageURL  String?
+  history   History[]
+  updatedAt DateTime   @updatedAt
+  createdAt DateTime   @default(now())
+  sources   Source[]
+  Settings  Settings[]
+}
+
+// Product's scrapped information history => All product info scrapped over time
+model History {
+  id        String   @id @default(uuid())
+  source    Source   @relation(fields: [sourceId], references: [id])
+  price     Float
+  date      DateTime @default(now())
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String
+  sourceId  String
+}
+
+// Products Source => All links registered to a specific product
+model Source {
+  id        String    @id @default(uuid())
+  product   Product   @relation(fields: [productId], references: [id])
+  productId String
+  source    String
+  History   History[]
+}
+
+model Settings {
+  id              String   @id @default(uuid())
+  version         String
+  language        String   @default("en-US")
+  nextScrap       DateTime @default(now())
+  featuredProduct Product? @relation(fields: [productId], references: [id])
+  productId       String?
+}

@@ -1,0 +1,16 @@
+export default {
+	primary: '#6C5DD3',
+	primaryHover: '#7b6dd3ff',
+	secondary: '#0049C6', 
+	primaryAccent: '#FFA2C0',
+	secondaryAccent: '#FFCE73',
+	dark: '#1B1D21',
+	gray: '#303030ff',
+	success: '#16a34a',
+	ligtherSuccess: '#22c55e',
+	danger: '#dc2626',
+	lighterDanger: '#ef4444',
+	info: '#06b6d4',
+	lighterInfo: '#22d3ee',
+	boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+};

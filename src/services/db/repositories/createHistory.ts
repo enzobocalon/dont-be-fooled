@@ -1,0 +1,1 @@
+// Insert a new register in the History table.
