@@ -1,5 +1,5 @@
 <h1 align='center'>Don't Be Fooled - Price Tracker</h1>
-<p align='center'>⚠️ THIS SOFTWARE IS STILL IN DEVELOPMENT ⚠️</p>
+<p align='center'>⚠️ THIS SOFTWARE IS STILL IN DEVELOPMENT AND IS CURRENTLY ON HOLD ⚠️</p>
 
 A pricetracker built with Electron, designed to provide a visual way to see historical prices on certain products.
 
